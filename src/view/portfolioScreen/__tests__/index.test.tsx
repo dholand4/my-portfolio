@@ -12,7 +12,7 @@ describe('PortfolioScreen', () => {
     );
 
     expect(getByText('Daniel Holanda')).toBeInTheDocument();
-    expect(getByText(/Engenheiro que entrega/i)).toBeInTheDocument();
+    expect(getByText(/O que faço/i)).toBeInTheDocument();
     expect(getByText(/Ferramentas do ofício/i)).toBeInTheDocument();
     expect(getByText(/Coisas que construí/i)).toBeInTheDocument();
     expect(getAllByText(/contato/i).length).toBeGreaterThan(0);

@@ -13,8 +13,8 @@ import { TYPER_PHRASES } from '@/constants/typerPhrases';
 import { Main } from './style';
 
 const ABOUT_PARAGRAPHS = [
-  'Projeto e construo sistemas de produção de ponta a ponta — do schema do banco a interfaces ajustadas no pixel.',
-  'Cinco anos na estrada. Opiniões fortes, defendidas com leveza. Prefiro deletar código a escrever.',
+  'Desenvolvo aplicações web de ponta a ponta — do banco ao deploy — com foco em ferramentas que automatizam processos e resolvem problemas reais. Frontend com React, Next.js e TypeScript; backend com Node.js, PostgreSQL e Supabase; deploy com Docker e Vercel.',
+  'Construí sistemas de pedidos online, painel self-hosted de campanhas de WhatsApp, divisor de fatura de cartão em PDF, gerador de questionários do Moodle e outras ferramentas que estão no meu GitHub.',
 ];
 
 export function PortfolioScreen() {

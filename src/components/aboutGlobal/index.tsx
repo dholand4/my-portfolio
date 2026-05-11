@@ -8,7 +8,7 @@ export function AboutGlobal({ paragraphs }: IAboutGlobalProps) {
   return (
     <Section id="sobre">
       <ContainerGlobal>
-        <SectionHeaderGlobal label="01 — sobre" title="Engenheiro que entrega." />
+        <SectionHeaderGlobal label="01 — sobre" title="O que faço." />
         {paragraphs.map((text, index) => (
           <RevealGlobal key={index}>
             <Paragraph>{text}</Paragraph>

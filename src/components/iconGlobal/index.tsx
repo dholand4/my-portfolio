@@ -47,5 +47,33 @@ export function IconGlobal({ name, size = 18, ...rest }: IIconProps) {
           <path d="M7 17L17 7M9 7h8v8" />
         </Svg>
       );
+    case 'menu':
+      return (
+        <Svg
+          $size={size}
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth={2}
+          strokeLinecap="round"
+          {...rest}
+        >
+          <path d="M4 7h16M4 12h16M4 17h16" />
+        </Svg>
+      );
+    case 'close':
+      return (
+        <Svg
+          $size={size}
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth={2}
+          strokeLinecap="round"
+          {...rest}
+        >
+          <path d="M6 6l12 12M6 18L18 6" />
+        </Svg>
+      );
   }
 }

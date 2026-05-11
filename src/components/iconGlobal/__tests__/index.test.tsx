@@ -3,7 +3,7 @@ import { renderWithTheme } from '@/utils/testUtils';
 import { IconGlobal } from '../index';
 
 describe('IconGlobal', () => {
-  it.each(['github', 'linkedin', 'email', 'external'] as const)(
+  it.each(['github', 'linkedin', 'email', 'external', 'menu', 'close'] as const)(
     'renders the %s icon as an svg',
     (name) => {
       const { container } = renderWithTheme(<IconGlobal name={name} />);

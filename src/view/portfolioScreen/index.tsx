@@ -35,7 +35,7 @@ export function PortfolioScreen() {
         <ProjectsGlobal projects={PROJECTS} />
         <ContactGlobal email={CONTACT_EMAIL} socials={SOCIAL_LINKS} />
       </Main>
-      <FooterGlobal text="// feito com cuidado · Daniel Holanda · 2026" />
+      <FooterGlobal text="// Daniel Holanda · 2026" />
     </>
   );
 }

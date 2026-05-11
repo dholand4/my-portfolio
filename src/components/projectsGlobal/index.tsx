@@ -11,7 +11,7 @@ export function ProjectsGlobal({ projects }: IProjectsGlobalProps) {
       <ContainerGlobal>
         <SectionHeaderGlobal
           label="03 — projetos selecionados"
-          title="Coisas que construí."
+          title="Experiências Práticas."
         />
         <Grid>
           {projects.map((project) => (

@@ -9,7 +9,7 @@ export function SkillsGlobal({ groups }: ISkillsGlobalProps) {
   return (
     <Section id="skills">
       <ContainerGlobal>
-        <SectionHeaderGlobal label="02 — stack" title="Ferramentas do ofício." />
+        <SectionHeaderGlobal label="02 — stack" title="Ferramentas e Tecnologias." />
         <Grid>
           {groups.map((group) => (
             <RevealGlobal key={group.title} stretch>

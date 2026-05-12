@@ -13,7 +13,7 @@ export const PROJECTS: IProject[] = [
     title: 'NoCode Exporter',
     description:
       'Ferramenta para exportar o código de projetos do Base44 diretamente para o seu computador — sem precisar editar código, via interface web local.',
-    stack: ['Node.js', 'Playwright', 'JavaScript'],
+    stack: ['Node.js', 'Playwright'],
     repoUrl: 'https://github.com/dholand4/nocode-exporter',
   },
   {
@@ -21,16 +21,15 @@ export const PROJECTS: IProject[] = [
     title: 'Sweet Orders',
     description:
       'Sistema de pedidos online para confeitarias — cliente monta o pedido pelo app, admin acompanha pelo painel e confirma pelo WhatsApp com mensagem pronta.',
-    stack: ['Next.js', 'TypeScript', 'Supabase', 'styled-components'],
+    stack: ['Next.js', 'styled-components', 'Supabase', 'TypeScript'],
     repoUrl: 'https://github.com/dholand4/sweet-orders',
-    demoUrl: 'https://sweet-orders-pearl.vercel.app',
   },
   {
     number: '/ 03',
     title: 'Bulk Whats',
     description:
       'Painel self-hosted para disparos em massa via WhatsApp Web. Gerencia contatos, monta campanhas com placeholders dinâmicos, envia ou agenda — sem APIs pagas.',
-    stack: ['TypeScript', 'React', 'PostgreSQL', 'Docker'],
+    stack: ['Docker', 'Node.js', 'PostgreSQL', 'React', 'TypeScript'],
     repoUrl: 'https://github.com/dholand4/zap-campaign',
   },
   {
@@ -38,7 +37,7 @@ export const PROJECTS: IProject[] = [
     title: 'Fatura Split',
     description:
       'Importa a fatura do cartão Itaú em PDF, lista os lançamentos e divide cada despesa entre várias pessoas — sem backend, sem cadastro, 100% no navegador.',
-    stack: ['React', 'TypeScript', 'Vite', 'Tailwind'],
+    stack: ['React', 'Tailwind', 'TypeScript', 'Vite', 'Vitest'],
     repoUrl: 'https://github.com/dholand4/fatura-split',
     demoUrl: 'https://fatura-split.vercel.app',
   },
@@ -47,8 +46,25 @@ export const PROJECTS: IProject[] = [
     title: 'Moodle Quiz Generator',
     description:
       'Ferramenta web para gerar arquivos XML compatíveis com o formato de importação de questionários do Moodle, eliminando a criação manual dos arquivos.',
-    stack: ['React', 'TypeScript', 'Vite', 'styled-components'],
+    stack: ['React', 'styled-components', 'TypeScript', 'Vite'],
     repoUrl: 'https://github.com/dholand4/moodle-quiz-builder',
-    demoUrl: 'https://dholand4.github.io/moodle-quiz-builder/',
   },
+  {
+    number: '/ 06',
+    title: 'Expense Home',
+    description:
+      'Aplicação full-stack de gestão financeira pessoal com controle de despesas, cartões, boletos, parcelamentos e dívidas, além de suporte multiusuário com sistema de convites.',
+    stack: [
+      'Express',
+      'JWT',
+      'Node.js',
+      'PostgreSQL',
+      'Prisma',
+      'React',
+      'TailwindCSS',
+      'Vite',
+    ],
+    repoUrl: 'https://github.com/dholand4/expense-home',
+  },
+
 ];

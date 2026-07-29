@@ -5,14 +5,14 @@ import { PortfolioScreen } from '../index';
 
 describe('PortfolioScreen', () => {
   it('renders the main sections', () => {
-    const { getByText, getAllByText } = render(
+    const { getByText, getAllByText, getByRole } = render(
       <ThemeProvider>
         <PortfolioScreen />
       </ThemeProvider>,
     );
 
     expect(getByText('Daniel Holanda')).toBeInTheDocument();
-    expect(getByText(/O que faço/i)).toBeInTheDocument();
+    expect(getByRole('heading', { name: /O que faço/i })).toBeInTheDocument();
     expect(getByText(/Ferramentas e Tecnologias/i)).toBeInTheDocument();
     expect(getByText(/Experiências Práticas/i)).toBeInTheDocument();
     expect(getAllByText(/contato/i).length).toBeGreaterThan(0);

@@ -13,9 +13,15 @@ export interface IExperience {
 
 export interface ICompany {
   name: string;
-  /** Caminho da imagem do logo (ex.: importada de src/assets/companies). Fica pronto pra receber as imagens depois. */
+  /** Caminho da imagem do logo */
   logo?: string;
   url?: string;
+  /** Papel / Especialidade técnica desempenhada */
+  role?: string;
+  /** Rótulo resumido de entrega ou métrica */
+  deliveries?: string;
+  /** Descrição curta do escopo de atuação */
+  highlight?: string;
 }
 
 export const EXPERIENCES: IExperience[] = [
@@ -108,18 +114,30 @@ export const EXPERIENCES: IExperience[] = [
 
 export const COMPANIES: ICompany[] = [
   {
-    name: 'Sertão ABA',
-    logo: sertaoAba,
-    url: 'https://www.instagram.com/sertaoaba/',
-  },
-  {
     name: 'UniCatólica Quixadá',
     logo: unicatolica,
     url: 'https://unicatolicaquixada.edu.br/',
+    role: 'Automação & Ensino Superior',
+    deliveries: '3 soluções desenvolvidas',
+    highlight:
+      'Automações no AVA/Moodle via Playwright, envio em massa de mensagens e gerador de questionários XML.',
+  },
+  {
+    name: 'Sertão ABA',
+    logo: sertaoAba,
+    url: 'https://www.instagram.com/sertaoaba/',
+    role: 'Sistemas de Gestão Clínica',
+    deliveries: '2 sistemas em produção',
+    highlight:
+      'Fechamento e rateio de repasses a profissionais por PDF, livro-caixa digital e relatórios mensais.',
   },
   {
     name: 'Dadudim',
     logo: dadudim,
     url: 'https://www.instagram.com/dadudim.qxd/',
+    role: 'E-commerce & Catálogo Digital',
+    deliveries: '1 plataforma entregue',
+    highlight:
+      'Catálogo online para delivery com painel admin completo, Supabase e checkout direto para WhatsApp.',
   },
 ];

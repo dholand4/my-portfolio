@@ -1,71 +1,67 @@
-import dadudim from '@/assets/empresas/dadudim.png';
-import sertaoAba from '@/assets/empresas/sertaoaba.png';
-import unicatolica from '@/assets/empresas/unicatolica.webp';
-
 export interface IExperience {
   number: string;
   title: string;
   company: string;
   companyUrl?: string;
+  personal?: boolean;
+  repoUrl?: string;
+  liveUrl?: string;
   description: string;
   stack: string[];
-}
-
-export interface ICompany {
-  name: string;
-  /** Caminho da imagem do logo */
-  logo?: string;
-  url?: string;
-  /** Papel / Especialidade técnica desempenhada */
-  role?: string;
-  /** Rótulo resumido de entrega ou métrica */
-  deliveries?: string;
-  /** Descrição curta do escopo de atuação */
-  highlight?: string;
 }
 
 export const EXPERIENCES: IExperience[] = [
   {
     number: '/ 01',
-    title: 'Moodle Mensagens',
-    company: 'UniCatólica Quixadá',
-    companyUrl: 'https://unicatolicaquixada.edu.br/',
+    title: 'Arretado Score',
+    liveUrl: 'https://arretadoscore.com',
+    company: 'Liga Quixadaense de Basquete',
     description:
-      'Aplicação web full-stack para automatizar o envio de mensagens nos fóruns do AVA da UniCatólica: crie templates reutilizáveis com variáveis dinâmicas ({{aula}}, {{data}}, {{disciplina}}...), agende a visibilidade por data e dispare para uma ou todas as disciplinas de uma vez. Inclui recorrência semanal (agenda um semestre inteiro num clique), editor de texto rico, histórico com logs em tempo real e automação do Moodle via Playwright — sem abrir o AVA manualmente.',
+      'Aplicação web feita para ajudar as ligas amadoras do Sertão Central a organizar seus campeonatos (foco inicial em basquete). O admin configura fases e playoffs, cadastra times e jogadores, monta os dias de jogos e lança as súmulas; tabela, playoffs e rankings se atualizam sozinhos e o público acompanha tudo sem precisar de login.',
     stack: [
       'React',
-      'Vite',
       'TypeScript',
-      'Node.js',
-      'Express',
-      'Playwright',
+      'Vite',
+      'TanStack Query',
       'styled-components',
-      'TipTap',
+      'Supabase',
+      'PostgreSQL',
+      'Edge Functions',
     ],
   },
   {
     number: '/ 02',
-    title: 'Conversor XML',
-    company: 'UniCatólica Quixadá',
-    companyUrl: 'https://unicatolicaquixada.edu.br/',
+    title: 'DCast Player',
+    repoUrl: 'https://github.com/dholand4/dcast-player',
+    company: 'Projeto Autoral',
+    personal: true,
     description:
-      'Ferramenta web para gerar arquivos XML compatíveis com o formato de importação de questionários do Moodle, eliminando a criação manual dos arquivos. Monte as questões numa interface simples e exporte um .xml pronto para importar na plataforma com um clique — roda inteiramente no navegador, sem backend.',
-    stack: ['React', 'TypeScript', 'Vite', 'styled-components'],
+      'Player de IPTV e streaming com TV ao vivo, filmes e séries a partir de listas Xtream Codes e M3U. Tem até 4 perfis por conta, favoritos, grade de programação (EPG) com replay, busca integrada e "Continuar Assistindo" sincronizado na nuvem, além de transmissão para Chromecast. Um único código roda no Android, no iOS, na Android TV e na Web.',
+    stack: [
+      'React Native',
+      'Expo',
+      'TypeScript',
+      'styled-components',
+      'React Navigation',
+      'Supabase',
+      'Google Cast',
+      'Android TV',
+    ],
   },
   {
     number: '/ 03',
-    title: 'Automação de Tutorias',
-    company: 'UniCatólica Quixadá',
-    companyUrl: 'https://unicatolicaquixada.edu.br/',
+    title: 'Controle de Sessões',
+    company: 'Sertão ABA',
+    companyUrl: 'https://www.instagram.com/sertaoaba/',
     description:
-      'Agente de automação para o cadastro semanal de atividades de tutoria no AVA da UniCatólica: define-se o período e as atividades numa planilha do Google Sheets, e o bot faz login, calcula as datas semanais e preenche todos os formulários automaticamente — com verificação de duplicidade, modo teste, sessão persistente e screenshots de erro. Inclui um bot do Telegram (via Cloudflare Worker) para adicionar atividades extras direto pelo celular.',
+      'Sistema para a clínica acompanhar, semana a semana, as sessões realizadas por paciente e por profissional, com saldo automático das autorizações (guias). Lançamento da semana inteira numa tela, previsão de quanto tempo o saldo dura, saldo por especialidade e alertas de débito, guia vencendo e sessões fora da vigência. Os cálculos ficam em views no banco, então o saldo está sempre correto. Funciona como app instalável (PWA).',
     stack: [
-      'Node.js',
-      'Playwright',
-      'Google Sheets API',
-      'Google Apps Script',
-      'Telegram Bot API',
-      'Cloudflare Workers',
+      'React',
+      'Vite',
+      'styled-components',
+      'Supabase',
+      'PostgreSQL',
+      'PWA',
     ],
   },
   {
@@ -110,34 +106,14 @@ export const EXPERIENCES: IExperience[] = [
       'App web de catálogo digital com carrinho que não processa pagamento: ao finalizar, monta uma mensagem formatada e leva o cliente para o WhatsApp da loja. Tem painel admin próprio para gerenciar produtos (simples, com variações e "monte a caixa"), categorias, cupons de desconto, formas de pagamento, horários de funcionamento e acompanhar o faturamento. Banco no Supabase (PostgreSQL) e deploy gratuito na Vercel.',
     stack: ['Next.js', 'TypeScript', 'Supabase', 'PostgreSQL', 'Vercel'],
   },
-];
-
-export const COMPANIES: ICompany[] = [
   {
-    name: 'UniCatólica Quixadá',
-    logo: unicatolica,
-    url: 'https://unicatolicaquixada.edu.br/',
-    role: 'Automação & Ensino Superior',
-    deliveries: '3 soluções desenvolvidas',
-    highlight:
-      'Automações no AVA/Moodle via Playwright, envio em massa de mensagens e gerador de questionários XML.',
-  },
-  {
-    name: 'Sertão ABA',
-    logo: sertaoAba,
-    url: 'https://www.instagram.com/sertaoaba/',
-    role: 'Sistemas de Gestão Clínica',
-    deliveries: '2 sistemas em produção',
-    highlight:
-      'Fechamento e rateio de repasses a profissionais por PDF, livro-caixa digital e relatórios mensais.',
-  },
-  {
-    name: 'Dadudim',
-    logo: dadudim,
-    url: 'https://www.instagram.com/dadudim.qxd/',
-    role: 'E-commerce & Catálogo Digital',
-    deliveries: '1 plataforma entregue',
-    highlight:
-      'Catálogo online para delivery com painel admin completo, Supabase e checkout direto para WhatsApp.',
+    number: '/ 07',
+    title: 'Conversor XML',
+    repoUrl: 'https://github.com/dholand4/moodle-quiz-builder',
+    company: 'Projeto Autoral',
+    personal: true,
+    description:
+      'Ferramenta web para gerar arquivos XML compatíveis com o formato de importação de questionários do Moodle, eliminando a criação manual dos arquivos. Monte as questões numa interface simples e exporte um .xml pronto para importar na plataforma com um clique — roda inteiramente no navegador, sem backend.',
+    stack: ['React', 'TypeScript', 'Vite', 'styled-components'],
   },
 ];

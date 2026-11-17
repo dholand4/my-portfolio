@@ -95,8 +95,17 @@ export const Stack = styled.div`
 
 export const Links = styled.div`
   display: flex;
-  gap: 18px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px 18px;
   position: relative;
+`;
+
+export const ProjectLinks = styled.div`
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
 `;
 
 export const LinkAnchor = styled.a`

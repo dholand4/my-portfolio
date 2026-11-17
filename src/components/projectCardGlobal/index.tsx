@@ -15,6 +15,7 @@ import {
   ModalDescription,
   ModalNum,
   ModalTitle,
+  ProjectLinks,
   MoreButton,
   Num,
   Stack,
@@ -28,6 +29,9 @@ export function ProjectCardGlobal({
   title,
   company,
   companyUrl,
+  personal = false,
+  repoUrl,
+  liveUrl,
   description,
   stack,
 }: IProjectCardGlobalProps) {
@@ -57,6 +61,36 @@ export function ProjectCardGlobal({
     return <CompanyName>{company}</CompanyName>;
   }
 
+  function renderProjectLinks() {
+    if (!repoUrl && !liveUrl) return null;
+    return (
+      <ProjectLinks>
+        {liveUrl && (
+          <LinkAnchor
+            href={liveUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={`Ver ${title} online`}
+          >
+            <IconGlobal name="external" size={13} aria-hidden />
+            ver online
+          </LinkAnchor>
+        )}
+        {repoUrl && (
+          <LinkAnchor
+            href={repoUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={`Código de ${title} no GitHub`}
+          >
+            <IconGlobal name="github" size={13} aria-hidden />
+            código
+          </LinkAnchor>
+        )}
+      </ProjectLinks>
+    );
+  }
+
   return (
     <>
       <Card onMouseMove={onMouseMove}>
@@ -83,9 +117,10 @@ export function ProjectCardGlobal({
         </Stack>
         <Links>
           <CompanyLabel>
-            empresa
+            {!personal && 'cliente'}
             {renderCompany()}
           </CompanyLabel>
+          {renderProjectLinks()}
         </Links>
       </Card>
 
@@ -106,9 +141,10 @@ export function ProjectCardGlobal({
         </Stack>
         <Links>
           <CompanyLabel>
-            empresa
+            {!personal && 'cliente'}
             {renderCompany()}
           </CompanyLabel>
+          {renderProjectLinks()}
         </Links>
       </ModalGlobal>
     </>

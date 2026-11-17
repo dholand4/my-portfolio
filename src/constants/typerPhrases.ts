@@ -1,6 +1,6 @@
 export const TYPER_PHRASES: readonly string[] = [
-  'Apps, bancos de dados e integrações.',
-  'Construo aplicações de acordo com as suas necessidades.',
-  'Do PDF e das planilhas ao aplicativo.',
-  'Apps que economizam tempo.',
+  'Do banco de dados ao deploy.',
+  'Web, mobile e automações.',
+  'Código tipado, testado e em produção.',
+  'Ferramentas que economizam tempo de verdade.',
 ];

@@ -1,6 +1,5 @@
-import { ICompany, IExperience } from '@/constants/experiences';
+import { IExperience } from '@/constants/experiences';
 
 export interface IProjectsGlobalProps {
   experiences: IExperience[];
-  companies: ICompany[];
 }

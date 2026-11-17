@@ -14,7 +14,7 @@ describe('PortfolioScreen', () => {
     expect(getByText('Daniel Holanda')).toBeInTheDocument();
     expect(getByRole('heading', { name: /O que faço/i })).toBeInTheDocument();
     expect(getByText(/Ferramentas e Tecnologias/i)).toBeInTheDocument();
-    expect(getByText(/Experiências Práticas/i)).toBeInTheDocument();
+    expect(getByText(/O que já construí/i)).toBeInTheDocument();
     expect(getAllByText(/contato/i).length).toBeGreaterThan(0);
   });
 });
